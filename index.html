@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<title>Simon Dash Game</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="assets/style.css">
+	<script src="assets/script.js"></script>
+</head>
+<body>
+
+<main>
+	<section id="menu">
+		<article id="blank"></article>
+		<article id="menuAbout"  class="squareHover" onclick="displaySwitch('about')">ABOUT</article>
+		<article id="blank"></article>
+		<article id="menuScore"  class="squareHover" onclick="displaySwitch('score')">SCORE</article>
+		<article id="menuGame"   class="squareHover" onclick="displaySwitch('game');gameStarter()">START</article>
+		<article id="menuConfig" class="squareHover" onclick="displaySwitch('config');sectionConfig()">CONFIG</article>
+		<article id="blank"></article>
+		<article id="menuKeys"   class="squareHover" onclick="displaySwitch('keys');sectionKeys()">KEYS</article>
+		<article id="blank"></article>
+	</section>
+	<section id="game">
+		<article id="gamePlays"  class="squareGame"></article>
+		<article id="gameTop"    class="squareGame"></article>
+		<article id="gameTimer"  class="squareGame"></article>
+		<article id="gameLeft"   class="squareGame"></article>
+		<article id="gameMiddle" class="squareGame"></article>
+		<article id="gameRight"  class="squareGame"></article>
+		<article id="gameHits"   class="squareGame"></article>
+		<article id="gameBottom" class="squareGame"></article>
+		<article id="gameMiss"   class="squareGame"></article>
+	</section>
+	<section id="config">
+		<article id="configTimerStatus">TIMER<br/>false</article>
+		<article id="configPlaysStatus">PLAYS<br/>false</article>
+		<article id="configMissStatus">MISS<br/>false</article>
+		<article id="configTimerLimit" class="squareHover">0</article>
+		<article id="configPlaysLimit" class="squareHover">0</article>
+		<article id="configMissLimit" class="squareHover">0</article>
+		<article id="configBack" class="squareHover" onclick="displaySwitch('menu')">MENU</article>
+		<article id="configReset" class="squareHover">RESET</article>
+		<article id="configNext" class="squareHover" onclick="displaySwitch('game');gameStarter()">PLAY</article>
+	</section>
+	<section id="score">
+		<article id="scorePlaysTitle">PLAYS</article>
+		<article id="scoreHitsTitle">HITS</article>
+		<article id="scoreMissTitle">MISS</article>
+		<article id="scorePlaysValue">0</article>
+		<article id="scoreHitsValue">0</article>
+		<article id="scoreMissValue">0</article>
+		<article id="scoreMenu" class="squareHover" onclick="displaySwitch('menu')">MENU</article>
+		<article id="scoreTimerValue">0</article>
+		<article id="scorePlay" class="squareHover" onclick="displaySwitch('game');gameStarter()">PLAY</article>
+	</section>
+	<section id="keys">
+		<article id="keysBlank"></article>
+		<article id="keysTopi" class="squareKey">W</article>
+		<article id="keysBlank">R</article>
+		<article id="keysLeft" class="squareKey">A</article>
+		<article id="keysMiddle"></article>
+		<article id="keysRight" class="squareKey">D</article>
+		<article id="keysMenu" class="squareHover" onclick="displaySwitch('menu')">MENU</article>
+		<article id="keysBottom" class="squareKey">S</article>
+		<article id="keysPlay" class="squareHover" onclick="displaySwitch('game');gameStarter()">PLAY</article>
+	</section>
+	<section id="about">
+		<article id="aboutDesc">
+			<p>
+				Olá, me chamo Allan O. e seja bem vindo ao meu jogo. Ele é baseado no jogo de cores chamado Simon.
+			</p>
+		</article>
+		<article id="scoreMenu" class="squareHover" onclick="displaySwitch('menu')">MENU</article>
+		<article id="blank"></article>
+		<article id="blank"></article>
+	</section>
+</main>
+
+</body>
+</html>

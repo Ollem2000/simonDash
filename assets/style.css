@@ -1,0 +1,103 @@
+*
+{
+	color: white; font-family: calibri;
+	margin: 0; padding: 0; box-sizing: border-box;
+	
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-khtml-user-select: none; /* Konqueror HTML */
+	-moz-user-select: none; /* Old versions of Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; /* Non-prefixed version, currently
+						  supported by Chrome, Edge, Opera and Firefox */
+}
+:root
+{
+	--colorA1: lightblue;
+	
+	--mainSize: calc((var(--squareSize) * 3) + (var(--squareBorderPx) * 3) + (var(--squareMargin) * 6));
+	
+	--squareAboutWidth: calc((var(--squareSize) * 3) + (var(--squareBorderPx) * 3) + (var(--squareMargin) * 4));
+	
+	--squareSize: 128px;
+	--squareBorderPx: 2px;
+	--squareBorder: var(--squareBorderPx) solid var(--colorA1);
+	--squareBorderRadius: 32px;
+	--boxShadow: 0 0 6px 0 var(--colorA1);
+	--squareMargin: 16px;
+	
+	--squareTextColor: var(--colorA1);
+	--squareTextSize: 32px;
+	--squareTextShadow: 0 0 6px var(--colorA1);
+}
+html
+{
+	height: 100%;
+}
+body
+{
+	background: #111;
+	height: 100%;
+	display: flex; align-items: center; justify-content: center;
+}
+main
+{
+	height: var(--mainSize); width: var(--mainSize);
+	/*transform: scale(1.5);*/
+}
+section
+{	
+	display: flex; align-items: center; justify-content: center;
+}
+article
+{
+	font-size: var(--squareTextSize);
+	color: var(--squareTextColor);
+	text-align: center;
+	text-shadow: var(--squareTextShadow);
+	border: var(--squareBorder);
+	border-radius: var(--squareBorderRadius);
+	box-shadow: var(--boxShadow), inset var(--boxShadow);
+	height: var(--squareSize); width: var(--squareSize);
+	margin: var(--squareMargin); float: left;
+	display: flex; align-items: center; justify-content: center;
+}
+	article>p
+	{
+		font-size: 24px;
+		margin: 16px;
+	}
+
+#menu
+{
+	display: block;
+}
+	#blank
+	{
+		border: none;
+		box-shadow: none;
+	}
+	.squareHover:hover
+	{
+		color: white;
+		text-shadow: none;
+		background: var(--colorA1);
+	}
+	.squareKey
+	{
+		color: hsl(200, 30%, 70%);
+	}
+#game, #config, #score, #about, #keys
+{
+	display: none;
+}
+	#aboutDesc
+	{
+		text-align: left;
+		height: calc(256px + 16px + 8px + 8px); width: var(--squareAboutWidth);
+	}
+
+#keys > section
+{
+	color: white;
+}
